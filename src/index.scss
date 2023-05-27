@@ -1,0 +1,272 @@
+* {
+  box-sizing: border-box;
+  outline: none;
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: #c8e2ff;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+
+.wrapper {
+  background: #ffffff;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.05);
+  border-radius: 20px;
+  max-width: 1080px;
+  margin: 50px auto;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+  border-bottom: 1px solid #d6d6d6;
+
+  .header-link {
+    text-decoration: none;
+    color: black;
+  }
+
+
+  .headerLeft {
+    display: flex;
+    align-items: center;
+
+    h3,
+    p {
+      margin: 0;
+    }
+
+    p {
+      opacity: 0.5;
+    }
+
+    h3 {
+      text-transform: uppercase;
+    }
+
+    img {
+      margin-right: 15px;
+    }
+  }
+
+  .headerRight {
+    display: flex;
+    margin: 0;
+    padding: 0;
+
+    .favourites-heart {
+      margin: 0 20px;
+      cursor: pointer;
+    }
+
+    li {
+      list-style-type: none;
+    }
+
+    span {
+      margin-left: 15px;
+    }
+  }
+}
+
+.content {
+  padding: 40px;
+}
+
+.sneakers {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+.search-block {
+  border: 1px solid #e7e7e7;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  padding: 0 15px;
+  position: relative;
+
+  .clear {
+    cursor: pointer;
+    right: 0px;
+    opacity: 0.5;
+    transition: opacity 0.2s ease-in-out;
+    position: absolute;
+    right: 10px;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  input {
+    border: none;
+    font-size: 16px;
+    padding: 10px;
+    width: 200px;
+  }
+}
+
+.first-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0px 0px 40px;
+}
+
+.overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+  h2 {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    font-size: 24px;
+    margin-bottom: 25px;
+
+    img {
+      cursor: pointer;
+    }
+  }
+
+
+.items {
+  flex: 1;
+}
+
+.cartItem {
+  border: 1px solid #e0e0e0;
+  border-radius: 20px;
+  padding: 5px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+
+  .imgSneakers {
+    margin-right: 20px;
+  }
+
+  p {
+    margin: 0;
+    margin-bottom: 5px;
+    font-size: 16px;
+  }
+
+  b {
+    font-size: 14px;
+  }
+
+  .cartInfoDiv {
+    margin-right: 20px;
+  }
+
+  .cartItemRemove {
+    opacity: 0.5;
+    transition: opacity 0.2s ease-in-out;
+
+    &:hover {
+      opacity: 1;
+      cursor: pointer;
+    }
+  }
+}
+
+
+.cartTotalBlock {
+  ul {
+    margin: 15px 0;
+    padding: 0;
+
+    .li-cart {
+      display: flex;
+      align-items: flex-end;
+      margin-bottom: 15px;
+    }
+
+    div {
+      flex: 1;
+      height: 1px;
+      border: 1px dashed #a9a9a9;
+      position: relative;
+      top: -3px;
+      margin: 0 7px;
+    }
+  }
+}
+
+.greenbutton {
+  width: 100%;
+  height: 55px;
+  border-radius: 15px;
+  border: 1px solid #d7d7d7;
+  background-color: #70e304;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  position: relative;
+
+  &:hover {
+    img {
+      transform: translateX(10px);
+    }
+  }
+
+  &:disabled{
+    background-color: #bebebe;
+    cursor: default;
+  }
+
+  img {
+    position: absolute;
+    right: 40px;
+    top: 20px;
+    transition: transform 0.2s ease-in-out;
+  }
+
+  &:hover {
+    background-color: lighten($color: #70e304, $amount: 5%);
+  }
+
+  &:active {
+    background-color: darken($color: #70e304, $amount: 5%);
+  }
+}
+
+.emptyCart {
+  padding: 0 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex: 1;
+
+  h2 {
+    margin-bottom: 0;
+  }
+
+  p {
+    opacity: 0.6;
+    margin-bottom: 25px;
+    margin-top: 5px;
+  }
+}
